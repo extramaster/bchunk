@@ -1,0 +1,92 @@
+.TH BCHUNK 1 "v1.2.0 29 Jun 2004" "Heikki Hannikainen"
+.SH NAME
+bchunk \- CD image format conversion from bin/cue to iso/cdr
+.SH SYNOPSIS
+.B bchunk [-v] [-p] [-r] [-w] [-s] <image.bin> <image.cue> <basename>
+.SH DESCRIPTION
+.LP
+.B bchunk 
+converts a CD image in a ".bin / .cue" format (sometimes ".raw / .cue") to a
+set of .iso and .cdr tracks.
+.LP
+The bin/cue format is used by some non-Unix cd-writing
+software, but is not supported on most other cd-writing
+programs.
+.LP
+image.bin is the raw cd image file. image.cue is the
+track index file containing track types and offsets.
+basename is used for the beginning part of the created
+track files.
+.LP
+The produced .iso track contains an ISO file system, which can be
+mounted through a loop device on Linux systems, or
+written on a CD-R using cdrecord.
+The .cdr tracks are in the native CD audio format. They can
+be either written on a CD-R using cdrecord -audio, or converted
+to WAV (or any other sound format for that matter) using
+sox.
+.LP
+It is advisable to edit the .cue file to either MODE2/2352/2048 or
+MODE2/2352/2324 depending on whether an ISO filesystem or a VCD is
+desired, respectively.
+The format itself does not contain this feature and in an ambiguous
+case it can only guess.
+.SH OPTIONS
+.TP 10
+.BI \-v
+Makes binchunker print some more unnecessary messages, which should
+not be of interest for anyone.
+.TP 10
+.BI \-w
+Makes binchunker write audio tracks in WAV format.
+.TP 10
+.BI \-s
+Makes binchunker swap byte order in the samples of audio tracks.
+.TP 10
+.BI \-p
+Makes binchunker go into PSX mode and truncate MODE2/2352 tracks to
+2336 bytes at offset 0 instead of normal 2048 bytes at offset 24.
+.TP 10
+.BI \-r
+Makes binchunker output MODE2/2352 tracks in raw format, from offset
+0 for 2352 bytes. Good for MPEG/VCD.
+.SH FILES
+.LP
+.TP 5
+.B image.bin
+Raw CD image file
+.TP 5
+.B image.cue
+TOC (Track index, Table Of Contents) file
+.TP 5
+.B *.iso
+Tracks in ISO9660 CD filesystem format. Can be either written on a
+CD-R using cdrecord, or mounted (on Linux platforms at least)
+through a loop device ('mount track.iso /mnt/cdrom -o loop=/dev/loop0,blocksize=1024').
+.TP 5
+.B *.cdr
+Audio tracks in native CD audio format. They can be either written on a
+CD-R using 'cdrecord -audio', or converted to WAV (or any other sound
+format for that matter) using sox ('sox track.cdr track.wav').
+.TP 5
+.B *.wav
+Audio tracks in WAV format.
+.SH "SEE ALSO"
+.BR cdrecord (1),
+.BR mkisofs (8),
+.BR sox (1),
+.BR cdrdao (1)
+.SH AUTHORS
+.LP
+.NF
+Heikki Hannikainen <hessu@hes.iki.fi>
+.br
+Bob Marietta <marietrg@SLU.EDU>
+.br
+Colas Nahaboo <Colas@Nahaboo.com>
+.br
+Godmar Back <gback@cs.utah.edu>
+.br
+Matthew Green <mrg@eterna.com.au>
+.br
+.FI
