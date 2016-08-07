@@ -11,7 +11,9 @@ Enhancements provided by:
 - Matthew Green <mrg ( atz ] eterna.com.au>, 2003
 		
 [http://he.fi/bchunk/](http://he.fi/bchunk/)
+
 [https://mzex.wordpress.com/2015/07/29/bchunk%E3%82%92windows%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/](https://mzex.wordpress.com/2015/07/29/bchunk%E3%82%92windows%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/)
+
 [http://blog.extramaster.net/2016/08/bchunk-v121-binchunker-for-windows.html](http://blog.extramaster.net/2016/08/bchunk-v121-binchunker-for-windows.html)
 
 ### What on earth is this stuff?
@@ -37,8 +39,6 @@ OpenBSD, FreeBSD and NetBSD all have a port of bchunk available in their respect
 Debian GNU/Linux users can install bchunk 1.2.0 using 'apt-get install bchunk', as bchunk is maintained as a [Debian package](http://packages.debian.org/bchunk).
 
 bchunk has apparently also been successfully compiled on BeOS without source modifications and the i386 binary can be [downloaded here](http://bezip.de/app/1340/).
-
-Download the (GPL'ed) source code below, read the README file, compile, and serve cold with a meal. Satisfaction not guaranteed. If it breaks, you get to keep both pieces.
 
 ### What's new?
 
