@@ -14,6 +14,13 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# Microsoft Visual C Compiler build output
+*.obj
+
+# Bchunk output exe folder
+# Note that virustotal falsely detects MSVC-compiled bchunk as a threat with a few A/Vs
+bchunk_out/
+
 # Windows shortcuts
 *.lnk
 

@@ -9,12 +9,6 @@ Enhancements provided by:
 - Colas Nahaboo <Colas ( atz ] Nahaboo.com>, 1999
 - Godmar Back <gback ( atz ] cs.utah.edu>, 2001
 - Matthew Green <mrg ( atz ] eterna.com.au>, 2003
-		
-[http://he.fi/bchunk/](http://he.fi/bchunk/)
-
-[https://mzex.wordpress.com/2015/07/29/bchunk%E3%82%92windows%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/](https://mzex.wordpress.com/2015/07/29/bchunk%E3%82%92windows%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/)
-
-[http://blog.extramaster.net/2016/08/bchunk-v121-binchunker-for-windows.html](http://blog.extramaster.net/2016/08/bchunk-v121-binchunker-for-windows.html)
 
 ### What on earth is this stuff?
 
@@ -82,6 +76,15 @@ bchunk has apparently also been successfully compiled on BeOS without source mod
     `$ cdrecord -v -dao -audio tracks??.cdr`
 
 If you only get loud noise on the tracks, try either -swab on cdrecord or -s on bchunk to swap the byte order.
+
+### External Links:
+
+[http://he.fi/bchunk/](http://he.fi/bchunk/)
+
+[https://mzex.wordpress.com/2015/07/29/bchunkをwindowsで使えるようにする/](https://mzex.wordpress.com/2015/07/29/bchunk%E3%82%92windows%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/)
+
+[http://blog.extramaster.net/2016/08/bchunk-v121-binchunker-for-windows.html](http://blog.extramaster.net/2016/08/bchunk-v121-binchunker-for-windows.html)
+
 
 ### License:
 
